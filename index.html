@@ -7,7 +7,8 @@
     function caiLED() { 
     
 	setOutputSize("small");
-		var lunar = getLunarDate(23, 3, 2023);
+	    var today = new Date();
+		var lunar = getLunarDate( today.getDate(), today.getMonth()+1, today.getFullYear());
 		var s =  "Ng\u00E0y " + lunar.day+"/"+lunar.month;
 		document.open();
 		document.writeln(s);
